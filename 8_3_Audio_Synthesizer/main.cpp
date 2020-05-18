@@ -27,7 +27,7 @@ Thread t;
 int idC = 0;
 
 
-int16_t signal[signalLength];
+float signal[signalLength];
 
 int16_t waveform[kAudioTxBufferSize];
 
@@ -94,7 +94,7 @@ void playNote(int freq)
 
   {
 
-    waveform[i] = (int16_t) (signal[(uint16_t) (i * freq * signalLength * 1. / kAudioSampleFrequency) % signalLength]);
+    waveform[i] = (int16_t) (signal[(uint16_t) (i * freq * signalLength * 1. / kAudioSampleFrequency) % signalLength] * ((1<<16) - 1));
 
   }
 

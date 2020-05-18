@@ -14,7 +14,7 @@ signalLength = 1024
 
 t = np.linspace(0, 2*np.pi, signalLength)
 
-signalTable = (np.sin(t) + 1.0) / 2.0 * ((1<<16) - 1)
+signalTable = (np.sin(t) + 1.0) / 2.0
 
 
 # output formatter
